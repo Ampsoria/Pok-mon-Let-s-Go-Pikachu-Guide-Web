@@ -220,6 +220,14 @@ button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
 .pokemon-card h3 { font-size: 14px; }
 .pokemon-dialog { border: 3px solid #26334c; }
 .detail-art { border: 2px solid #26334c; box-shadow: 5px 5px 0 #26334c28; }
+.detail-attack { margin-top: 18px; padding-top: 17px; border-top: 1px solid var(--line); }
+.detail-attack-cards { display: grid; gap: 9px; }
+.detail-attack-card { padding: 11px 12px; background: #fff8e5; border: 1px solid #ead599; border-radius: 11px; }
+.detail-attack-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 11px; font-weight: 800; }
+.detail-attack-targets { display: flex; flex-wrap: wrap; gap: 6px; }
+.detail-attack-target { display: inline-flex; align-items: center; gap: 3px; padding: 3px; background: #fff; border-radius: 7px; }
+.detail-attack-target small { font-size: 10px; font-weight: 800; color: #bb514b; }
+.detail-attack-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
 .detail-moves { border-top: 2px solid var(--line); margin-top: 27px; padding-top: 24px; }
 .move-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; }
 .detail-moves .move-heading h3 { font-size: 20px; margin: 0 0 7px; }
