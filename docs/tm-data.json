@@ -1,0 +1,550 @@
+[
+  {
+    "no": "TM01",
+    "name": "Headbutt",
+    "type": "Normal",
+    "pp": "15",
+    "power": "70",
+    "accuracy": "100",
+    "location": "Pewter City (Gym - defeat Brock)"
+  },
+  {
+    "no": "TM02",
+    "name": "Taunt",
+    "type": "Dark",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "100",
+    "location": "Cinnabar Island (Lab - from scientist)"
+  },
+  {
+    "no": "TM03",
+    "name": "Helping Hand",
+    "type": "Normal",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Celadon City (Department Store - 3F, from clerk)"
+  },
+  {
+    "no": "TM04",
+    "name": "Teleport",
+    "type": "Psychic",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Pokémon Tower (4F)"
+  },
+  {
+    "no": "TM05",
+    "name": "Rest",
+    "type": "Psychic",
+    "pp": "10",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Rocket Hideout (B2F, west)"
+  },
+  {
+    "no": "TM06",
+    "name": "Light Screen",
+    "type": "Psychic",
+    "pp": "30",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Celadon City (Department Store roof; give Fresh Water to girl)"
+  },
+  {
+    "no": "TM07",
+    "name": "Protect",
+    "type": "Normal",
+    "pp": "10",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Celadon City (Department Store roof; give Lemonade to girl)"
+  },
+  {
+    "no": "TM08",
+    "name": "Substitute",
+    "type": "Normal",
+    "pp": "10",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Saffron City (northwest, show Clefairy to Copycat)"
+  },
+  {
+    "no": "TM09",
+    "name": "Reflect",
+    "type": "Psychic",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Celadon City (Department Store roof; give Soda Pop to girl)"
+  },
+  {
+    "no": "TM10",
+    "name": "Dig",
+    "type": "Ground",
+    "pp": "10",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Cerulean City (northeast; defeat Team Rocket Grunt)"
+  },
+  {
+    "no": "TM11",
+    "name": "Will-O-Wisp",
+    "type": "Fire",
+    "pp": "15",
+    "power": "--",
+    "accuracy": "85",
+    "location": "Viridian City (southwest; requires Chop Down)"
+  },
+  {
+    "no": "TM12",
+    "name": "Facade",
+    "type": "Normal",
+    "pp": "20",
+    "power": "70",
+    "accuracy": "100",
+    "location": "Route 7 (north; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM13",
+    "name": "Brick Break",
+    "type": "Fighting",
+    "pp": "15",
+    "power": "75",
+    "accuracy": "100",
+    "location": "Route 10 (south; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM14",
+    "name": "Fly",
+    "type": "Flying",
+    "pp": "15",
+    "power": "90",
+    "accuracy": "95",
+    "location": "Route 16 (north; requires Chop Down)"
+  },
+  {
+    "no": "TM15",
+    "name": "Seismic Toss",
+    "type": "Fighting",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "100",
+    "location": "Route 25 (east; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM16",
+    "name": "Thunder Wave",
+    "type": "Electric",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "90",
+    "location": "Route 25 (north; may require Chop Down)"
+  },
+  {
+    "no": "TM17",
+    "name": "Dragon Tail",
+    "type": "Dragon",
+    "pp": "10",
+    "power": "60",
+    "accuracy": "90",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 20000
+  },
+  {
+    "no": "TM18",
+    "name": "U-turn",
+    "type": "Bug",
+    "pp": "20",
+    "power": "70",
+    "accuracy": "100",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 20000
+  },
+  {
+    "no": "TM19",
+    "name": "Iron Tail",
+    "type": "Steel",
+    "pp": "15",
+    "power": "100",
+    "accuracy": "75",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 50000
+  },
+  {
+    "no": "TM20",
+    "name": "Dark Pulse",
+    "type": "Dark",
+    "pp": "15",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Rocket Hideout (B3F, southeast)"
+  },
+  {
+    "no": "TM21",
+    "name": "Foul Play",
+    "type": "Dark",
+    "pp": "15",
+    "power": "95",
+    "accuracy": "100",
+    "location": "Pokémon Mansion (3F, northeast)"
+  },
+  {
+    "no": "TM22",
+    "name": "Rock Slide",
+    "type": "Rock",
+    "pp": "10",
+    "power": "75",
+    "accuracy": "90",
+    "location": "Pokémon Mansion (2F, northwest; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM23",
+    "name": "Thunder Punch",
+    "type": "Electric",
+    "pp": "15",
+    "power": "75",
+    "accuracy": "100",
+    "location": "Saffron City (Fighting Dojo; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM24",
+    "name": "X-Scissor",
+    "type": "Bug",
+    "pp": "15",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Route 12 (center)"
+  },
+  {
+    "no": "TM25",
+    "name": "Waterfall",
+    "type": "Water",
+    "pp": "15",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 30000
+  },
+  {
+    "no": "TM26",
+    "name": "Poison Jab",
+    "type": "Poison",
+    "pp": "20",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Celadon City (across pond)"
+  },
+  {
+    "no": "TM27",
+    "name": "Toxic",
+    "type": "Poison",
+    "pp": "10",
+    "power": "--",
+    "accuracy": "90",
+    "location": "Fuchsia City (Gym - defeat Koga)"
+  },
+  {
+    "no": "TM28",
+    "name": "Tri Attack",
+    "type": "Normal",
+    "pp": "10",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 30000
+  },
+  {
+    "no": "TM29",
+    "name": "Scald",
+    "type": "Water",
+    "pp": "15",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Cerulean City (Gym - defeat Misty)"
+  },
+  {
+    "no": "TM30",
+    "name": "Bulk Up",
+    "type": "Fighting",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 10000
+  },
+  {
+    "no": "TM31",
+    "name": "Fire Punch",
+    "type": "Fire",
+    "pp": "15",
+    "power": "75",
+    "accuracy": "100",
+    "location": "Route 15 (north; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM32",
+    "name": "Dazzling Gleam",
+    "type": "Fairy",
+    "pp": "10",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Route 12 (south; from Mr Dazzling)"
+  },
+  {
+    "no": "TM33",
+    "name": "Calm Mind",
+    "type": "Psychic",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Saffron City (Gym - defeat Sabrina)"
+  },
+  {
+    "no": "TM34",
+    "name": "Dragon Pulse",
+    "type": "Dragon",
+    "pp": "10",
+    "power": "85",
+    "accuracy": "100",
+    "location": "Silph Co. (7F, northeast)"
+  },
+  {
+    "no": "TM35",
+    "name": "Ice Punch",
+    "type": "Ice",
+    "pp": "15",
+    "power": "75",
+    "accuracy": "100",
+    "location": "Route 21 (center; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM36",
+    "name": "Thunderbolt",
+    "type": "Electric",
+    "pp": "15",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Vermilion City (Gym - defeat Lt. Surge)"
+  },
+  {
+    "no": "TM37",
+    "name": "Flamethrower",
+    "type": "Fire",
+    "pp": "15",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Silph Co. (10F, southwest)"
+  },
+  {
+    "no": "TM38",
+    "name": "Thunder",
+    "type": "Electric",
+    "pp": "10",
+    "power": "110",
+    "accuracy": "70",
+    "location": "Power Plant (1F, southeast)"
+  },
+  {
+    "no": "TM39",
+    "name": "Outrage",
+    "type": "Dragon",
+    "pp": "10",
+    "power": "120",
+    "accuracy": "100",
+    "location": "Victory Road (2F, east; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM40",
+    "name": "Psychic",
+    "type": "Psychic",
+    "pp": "10",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Saffron City (southeast)"
+  },
+  {
+    "no": "TM41",
+    "name": "Earthquake",
+    "type": "Ground",
+    "pp": "10",
+    "power": "100",
+    "accuracy": "100",
+    "location": "Viridian City (Gym - defeat Giovanni)"
+  },
+  {
+    "no": "TM42",
+    "name": "Self-Destruct",
+    "type": "Normal",
+    "pp": "5",
+    "power": "200",
+    "accuracy": "100",
+    "location": "Silph Co. (2F, northwest)"
+  },
+  {
+    "no": "TM43",
+    "name": "Shadow Ball",
+    "type": "Ghost",
+    "pp": "15",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 30000
+  },
+  {
+    "no": "TM44",
+    "name": "Play Rough",
+    "type": "Fairy",
+    "pp": "10",
+    "power": "90",
+    "accuracy": "90",
+    "location": "Celadon City (Condominiums - rear entrance)"
+  },
+  {
+    "no": "TM45",
+    "name": "Solar Beam",
+    "type": "Grass",
+    "pp": "10",
+    "power": "200",
+    "accuracy": "100",
+    "location": "Victory Road (2F, south)"
+  },
+  {
+    "no": "TM46",
+    "name": "Fire Blast",
+    "type": "Fire",
+    "pp": "5",
+    "power": "110",
+    "accuracy": "85",
+    "location": "Cinnabar Island (Gym - defeat Blaine)"
+  },
+  {
+    "no": "TM47",
+    "name": "Surf",
+    "type": "Water",
+    "pp": "15",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Route 15 (west)"
+  },
+  {
+    "no": "TM48",
+    "name": "Hyper Beam",
+    "type": "Normal",
+    "pp": "5",
+    "power": "150",
+    "accuracy": "90",
+    "location": "Celadon City (Department Store 2F)",
+    "price": 100000
+  },
+  {
+    "no": "TM49",
+    "name": "Superpower",
+    "type": "Fighting",
+    "pp": "5",
+    "power": "120",
+    "accuracy": "100",
+    "location": "Victory Road (2F, northeast)"
+  },
+  {
+    "no": "TM50",
+    "name": "Roost",
+    "type": "Flying",
+    "pp": "10",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Route 12 (north gate)"
+  },
+  {
+    "no": "TM51",
+    "name": "Blizzard",
+    "type": "Ice",
+    "pp": "5",
+    "power": "110",
+    "accuracy": "70",
+    "location": "Victory Road (3F, northwest)"
+  },
+  {
+    "no": "TM52",
+    "name": "Sludge Bomb",
+    "type": "Poison",
+    "pp": "10",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Pokémon Mansion (B1F, southeast)"
+  },
+  {
+    "no": "TM53",
+    "name": "Mega Drain",
+    "type": "Grass",
+    "pp": "10",
+    "power": "75",
+    "accuracy": "100",
+    "location": "Celadon City (Gym - defeat Erika)"
+  },
+  {
+    "no": "TM54",
+    "name": "Flash Cannon",
+    "type": "Steel",
+    "pp": "10",
+    "power": "80",
+    "accuracy": "100",
+    "location": "Silph Co. (5F, southwest)"
+  },
+  {
+    "no": "TM55",
+    "name": "Ice Beam",
+    "type": "Ice",
+    "pp": "10",
+    "power": "90",
+    "accuracy": "100",
+    "location": "Seafoam Islands (B2F)"
+  },
+  {
+    "no": "TM56",
+    "name": "Stealth Rock",
+    "type": "Rock",
+    "pp": "20",
+    "power": "--",
+    "accuracy": "--",
+    "location": "Victory Road (1F, northeast)"
+  },
+  {
+    "no": "TM57",
+    "name": "Pay Day",
+    "type": "Normal",
+    "pp": "20",
+    "power": "40",
+    "accuracy": "100",
+    "location": "Route 4 (defeat Coach Trainer)"
+  },
+  {
+    "no": "TM58",
+    "name": "Drill Run",
+    "type": "Ground",
+    "pp": "10",
+    "power": "80",
+    "accuracy": "95",
+    "location": "Route 17 (center; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM59",
+    "name": "Dream Eater",
+    "type": "Psychic",
+    "pp": "15",
+    "power": "100",
+    "accuracy": "100",
+    "location": "Route 12 (center; defeat Coach Trainer)"
+  },
+  {
+    "no": "TM60",
+    "name": "Megahorn",
+    "type": "Bug",
+    "pp": "10",
+    "power": "120",
+    "accuracy": "85",
+    "location": "Cerulean City (near Cerulean Cave; defeat Coach Trainer)"
+  }
+]

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="124" viewBox="0 0 840 124" role="img" aria-labelledby="title desc">
+  <title id="title">Open the live Kanto Companion guide</title>
+  <desc id="desc">Yellow Pokémon-inspired button with a Poké Ball and arrow</desc>
+  <rect x="5" y="7" width="830" height="110" rx="27" fill="#222530"/>
+  <rect x="5" y="3" width="830" height="106" rx="27" fill="#ffdb4d" stroke="#252836" stroke-width="6"/>
+  <circle cx="66" cy="56" r="27" fill="#fff" stroke="#252836" stroke-width="5"/>
+  <path d="M39 56a27 27 0 0 1 54 0Z" fill="#ef5252"/>
+  <path d="M39 56h54" stroke="#252836" stroke-width="5"/>
+  <circle cx="66" cy="56" r="8" fill="#fff" stroke="#252836" stroke-width="4"/>
+  <text x="112" y="52" fill="#252836" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="800" letter-spacing="1">OPEN THE LIVE GUIDE</text>
+  <text x="112" y="85" fill="#4a4130" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600">Pokémon: Let's Go, Pikachu! · TH / EN</text>
+  <path d="M775 56h29m-12-12 12 12-12 12" fill="none" stroke="#252836" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

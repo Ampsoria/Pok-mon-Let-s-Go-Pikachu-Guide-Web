@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fff6db">
+  <meta name="description" content="โปเกมอนขี่ได้ 18 ตัวใน Pokémon Let's Go, Pikachu! วิธีได้ วิธีขี่ และเงื่อนไขขี่บินหรือในน้ำ">
+  <title>โปเกมอนขี่ — Kanto Companion</title>
+  <link rel="icon" type="image/svg+xml" href="assets/pokeball.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="guide.css">
+</head>
+<body data-page="rides">
+  <header class="topbar"><a class="brand" href="index.html" aria-label="Kanto Companion home"><span class="brand-ball"></span><span>KANTO<span class="brand-sub">COMPANION</span></span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="index.html" data-t="home">หน้าหลัก</a><a href="index.html#dex" data-t="dex">โปเกเดกซ์</a><a href="items.html" data-t="items">ไอเท็ม</a><a class="current" href="rides.html" data-t="rides">โปเกมอนขี่</a></nav><div class="header-actions"><button id="langBtn" class="lang-btn" type="button" aria-label="Switch language">EN</button><button id="menuBtn" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation"></nav>
+  <main>
+    <section class="guide-hero rides-hero"><div class="wrap guide-hero-inner"><div><span class="kicker">FIELD NOTES / 02</span><h1 data-t="ridesTitle">ออกเดินทางไปด้วยกัน</h1><p data-t="ridesLead">ขี่โปเกมอน 18 ตัวทั่วคันโต ตั้งแต่ Arcanine ที่วิ่งเร็ว ไปจนถึง Dragonite ที่บินข้ามสิ่งกีดขวางได้หลังจบลีก</p><a class="guide-hero-link" href="items.html"><span data-t="itemsCta">ดูคู่มือไอเท็ม</span> ↗</a></div><div class="guide-hero-art ride-art"><span class="orbit-ball ball-a"></span><img src="assets/59.png" alt="Arcanine"><img class="ride-mini" src="assets/149.png" alt="Dragonite"></div></div></section>
+    <section class="guide-section wrap"><div class="guide-intro"><div><span class="kicker" data-t="howKicker">HOW TO RIDE</span><h2 data-t="howTitle">เริ่มขี่อย่างไร?</h2></div></div><div class="how-grid"><article><span>01</span><h3 data-t="step1Title">เลือกโปเกมอน</h3><p data-t="step1Body">เปิดเมนู Party แล้วเลือกโปเกมอนขี่ได้ที่อยู่ในทีม</p></article><article><span>02</span><h3 data-t="step2Title">ปล่อยออกจากบอล</h3><p data-t="step2Body">เลือก “Take out of Poké Ball” เพื่อให้โปเกมอนตามเรา แล้วตัวละครจะขี่อัตโนมัติ</p></article><article><span>03</span><h3 data-t="step3Title">ปลดล็อกตามประเภท</h3><p data-t="step3Body">Gyarados และ Lapras ขี่ได้บนผิวน้ำเมื่อใช้ Sea Skim; การบินสูงข้ามสิ่งกีดขวางปลดล็อกหลังชนะจตุรเทพ</p></article></div>
+      <div class="guide-note ride-note"><b data-t="rideNoteTitle">ขี่บนบก ≠ ใช้ Secret Technique</b><p data-t="rideNote">การขี่ไม่ได้แทน Chop Down, Sea Skim หรือ Sky Dash ของพิคาชู การเดินทางทางน้ำยังต้องเรียน Sea Skim ก่อน ส่วน Charizard, Aerodactyl และ Dragonite จะบินสูงได้หลังชนะ Pokémon League</p></div>
+    </section>
+    <section class="guide-section ride-catalog"><div class="wrap"><div class="guide-intro"><div><span class="kicker" data-t="rideDexKicker">RIDE DEX</span><h2 data-t="rideDexTitle">เลือกเพื่อนร่วมทาง</h2><p data-t="rideDexLead">กดการ์ดเพื่อดูวิธีรับโปเกมอนแต่ละตัว</p></div><div class="guide-stat"><strong>18</strong><span data-t="ridesCountLabel">ตัวที่ขี่ได้</span></div></div><div id="rideTabs" class="guide-tabs" role="group" aria-label="Ride type"></div><p id="resultCount" class="guide-result-count" aria-live="polite"></p><div id="rideGrid" class="ride-grid"></div></div></section>
+  </main>
+  <dialog id="detailDialog" class="guide-dialog" aria-labelledby="dialogTitle"><button id="detailClose" class="detail-close" type="button" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
+  <footer><div class="wrap guide-footer"><a class="brand" href="index.html"><span class="brand-ball"></span><span>KANTO<span class="brand-sub">COMPANION</span></span></a><p data-t="disclaimer">คู่มือแฟนเมด Pokémon: Let's Go, Pikachu! ไม่เกี่ยวข้องกับ Nintendo หรือ The Pokémon Company</p><div class="source-links"><a href="https://www.serebii.net/letsgopikachueevee/followingride.shtml" target="_blank" rel="noopener">Serebii: Following & Ride ↗</a><a href="https://www.serebii.net/letsgopikachueevee/gift.shtml" target="_blank" rel="noopener">Serebii: Gift Pokémon ↗</a><a href="https://www.serebii.net/letsgopikachueevee/sky.shtml" target="_blank" rel="noopener">Serebii: Sky ↗</a></div></div></footer>
+  <script src="guide-data.js" defer></script><script src="guide.js" defer></script>
+</body>
+</html>

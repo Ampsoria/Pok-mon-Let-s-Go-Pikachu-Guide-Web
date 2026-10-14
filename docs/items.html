@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fff6db">
+  <meta name="description" content="คู่มือไอเท็ม Pokémon Let's Go, Pikachu! รวม Poké Ball ยา ลูกกวาด และ TM 60 ชิ้น พร้อมราคาและวิธีรับ">
+  <title>ไอเท็มและ TM — Kanto Companion</title>
+  <link rel="icon" type="image/svg+xml" href="assets/pokeball.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="guide.css">
+</head>
+<body data-page="items">
+  <header class="topbar"><a class="brand" href="index.html" aria-label="Kanto Companion home"><span class="brand-ball"></span><span>KANTO<span class="brand-sub">COMPANION</span></span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="index.html" data-t="home">หน้าหลัก</a><a href="index.html#dex" data-t="dex">โปเกเดกซ์</a><a class="current" href="items.html" data-t="items">ไอเท็ม</a><a href="rides.html" data-t="rides">โปเกมอนขี่</a></nav><div class="header-actions"><button id="langBtn" class="lang-btn" type="button" aria-label="Switch language">EN</button><button id="menuBtn" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div></header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation"></nav>
+  <main>
+    <section class="guide-hero items-hero"><div class="wrap guide-hero-inner"><div><span class="kicker" data-t="itemsKicker">FIELD NOTES / 01</span><h1 data-t="itemsTitle">กระเป๋าของเทรนเนอร์</h1><p data-t="itemsLead">ค้นหา Poké Ball, ยา, ลูกกวาด และ TM ทุกหมายเลข พร้อมวิธีรับและราคาที่มีข้อมูลยืนยันสำหรับภาค Let’s Go</p><a class="guide-hero-link" href="rides.html"><span data-t="ridesCta">ต่อไป: โปเกมอนขี่</span> ↗</a></div><div class="guide-hero-art"><span class="orbit-ball ball-a"></span><span class="orbit-ball ball-b"></span><img src="assets/25.png" alt="Pikachu"></div></div></section>
+    <section class="guide-section wrap"><div class="guide-intro"><div><span class="kicker" data-t="browseKicker">ITEM INDEX</span><h2 data-t="browseTitle">เปิดดูอุปกรณ์</h2><p data-t="browseLead">กดการ์ดเพื่อดูรายละเอียด ราคา และจุดรับ</p></div><div class="guide-stat"><strong>60</strong><span data-t="tmCountLabel">TM ทั้งหมด</span></div></div>
+      <div class="guide-toolbar"><div id="itemTabs" class="guide-tabs" role="group" aria-label="Item category"></div><label class="guide-search"><span>⌕</span><input id="itemSearch" type="search" autocomplete="off" aria-label="Search items"></label></div>
+      <p id="resultCount" class="guide-result-count" aria-live="polite"></p><div id="itemGrid" class="item-grid"></div>
+      <div class="guide-note"><b data-t="candyNoteTitle">รู้ไว้เรื่องลูกกวาด</b><p data-t="candyNote">ลูกกวาดค่าสถานะ 6 ชนิดมีรุ่น L และ XL ตามระดับโปเกมอนที่ใช้ได้ ส่วนลูกกวาดประจำสายพันธุ์เพิ่มทุกค่าสถานะ หาได้จากการจับซ้ำและส่งโปเกมอนให้ Professor Oak</p></div>
+    </section>
+  </main>
+  <dialog id="detailDialog" class="guide-dialog" aria-labelledby="dialogTitle"><button id="detailClose" class="detail-close" type="button" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
+  <footer><div class="wrap guide-footer"><a class="brand" href="index.html"><span class="brand-ball"></span><span>KANTO<span class="brand-sub">COMPANION</span></span></a><p data-t="disclaimer">คู่มือแฟนเมด Pokémon: Let's Go, Pikachu! ไม่เกี่ยวข้องกับ Nintendo หรือ The Pokémon Company</p><div class="source-links"><a href="https://www.serebii.net/letsgopikachueevee/items.shtml" target="_blank" rel="noopener">Serebii: Items ↗</a><a href="https://www.serebii.net/letsgopikachueevee/tms.shtml" target="_blank" rel="noopener">Serebii: TMs ↗</a><a href="https://www.serebii.net/letsgopikachueevee/candy.shtml" target="_blank" rel="noopener">Serebii: Candy ↗</a><a href="https://pokemondb.net/lets-go-pikachu-eevee/tms" target="_blank" rel="noopener">Pokémon Database: TM locations ↗</a><a href="https://gamefaqs.gamespot.com/switch/240025-pokemon-lets-go-pikachu/faqs/76631/celadon-city" target="_blank" rel="noopener">GameFAQs: Celadon prices ↗</a><a href="https://gamefaqs.gamespot.com/switch/240025-pokemon-lets-go-pikachu/faqs/76631/pokemon-league" target="_blank" rel="noopener">GameFAQs: League prices ↗</a></div></div></footer>
+  <script src="guide-data.js" defer></script><script src="tm-effects.js" defer></script><script src="guide.js" defer></script>
+</body>
+</html>
