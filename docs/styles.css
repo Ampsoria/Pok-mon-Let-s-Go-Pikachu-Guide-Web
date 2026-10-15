@@ -29,7 +29,7 @@ h1,h2,h3{font-family:Outfit,Anuphan,sans-serif;letter-spacing:-.035em}
 .elite-team{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-wrap:wrap;gap:5px}
 .elite-team span{background:#f4f5f7;border-radius:5px;padding:4px 6px;font-size:10px;font-weight:700}
 .champion-card{margin-top:17px;border-radius:17px;background:#263a63;color:#fff;padding:24px 27px;display:flex;gap:22px;align-items:center;position:relative;overflow:hidden}
-.champion-card:before{content:"★";position:absolute;right:13%;top:-105px;font-size:250px;color:#ffffff0b}
+.champion-card:before{content:"";position:absolute;right:13%;top:-105px;font-size:250px;color:#ffffff0b}
 .champion-card img{width:92px;height:92px;object-fit:contain;image-rendering:pixelated;flex:0 0 auto;position:relative}
 .champion-card h3{font-size:23px;margin:0 0 6px}
 .champion-card p{font-size:12px;line-height:1.8;color:#dbe4f4;margin:0;max-width:710px}

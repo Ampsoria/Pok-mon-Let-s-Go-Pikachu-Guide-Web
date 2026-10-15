@@ -1,5 +1,6 @@
 (() => {
   const $ = s => document.querySelector(s);
+  const uiIcon = name => `<svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=all-icons-1#${name}"></use></svg>`;
   const page = document.body.dataset.page;
   let lang = localStorage.getItem('kc-lang') === 'en' ? 'en' : 'th';
   let active = page === 'items' ? 'balls' : 'all';
@@ -9,7 +10,7 @@
     $('#mobileNav').classList.toggle('open', open);
     button.setAttribute('aria-expanded', String(open));
     button.setAttribute('aria-label', lang === 'th' ? (open ? 'ปิดเมนู' : 'เปิดเมนู') : (open ? 'Close menu' : 'Open menu'));
-    button.textContent = open ? '×' : '☰';
+    button.innerHTML = uiIcon(open ? 'close' : 'menu');
   }
   const copy = {
     th: {home:'หน้าหลัก',dex:'โปเกเดกซ์',items:'ไอเท็ม',rides:'โปเกมอนขี่',itemsKicker:'FIELD NOTES / 01',itemsTitle:'กระเป๋าของเทรนเนอร์',itemsLead:'ค้นหา Poké Ball, ยา, ลูกกวาด และ TM ทุกหมายเลข พร้อมวิธีรับและราคาที่มีข้อมูลยืนยันสำหรับภาค Let’s Go',ridesCta:'ต่อไป: โปเกมอนขี่',browseKicker:'ITEM INDEX',browseTitle:'เปิดดูอุปกรณ์',browseLead:'กดการ์ดเพื่อดูรายละเอียด ราคา และจุดรับ',tmCountLabel:'TM ทั้งหมด',candyNoteTitle:'รู้ไว้เรื่องลูกกวาด',candyNote:'ลูกกวาดค่าสถานะ 6 ชนิดมีรุ่น L และ XL ตามระดับโปเกมอนที่ใช้ได้ ส่วนลูกกวาดประจำสายพันธุ์เพิ่มทุกค่าสถานะ หาได้จากการจับซ้ำและส่งโปเกมอนให้ Professor Oak',ridesTitle:'ออกเดินทางไปด้วยกัน',ridesLead:'ขี่โปเกมอน 18 ตัวทั่วคันโต ตั้งแต่ Arcanine ที่วิ่งเร็ว ไปจนถึง Dragonite ที่บินข้ามสิ่งกีดขวางได้หลังจบลีก',itemsCta:'ดูคู่มือไอเท็ม',howKicker:'HOW TO RIDE',howTitle:'เริ่มขี่อย่างไร?',step1Title:'เลือกโปเกมอน',step1Body:'เปิดเมนู Party แล้วเลือกโปเกมอนขี่ได้ที่อยู่ในทีม',step2Title:'ปล่อยออกจากบอล',step2Body:'เลือก “Take out of Poké Ball” เพื่อให้โปเกมอนตามเรา แล้วตัวละครจะขี่อัตโนมัติ',step3Title:'ปลดล็อกตามประเภท',step3Body:'Gyarados และ Lapras ขี่ได้บนผิวน้ำเมื่อใช้ Sea Skim; การบินสูงข้ามสิ่งกีดขวางปลดล็อกหลังชนะจตุรเทพ',rideNoteTitle:'การขี่และ Secret Techniques',rideNote:'การเดินทางทางน้ำยังต้องเรียน Sea Skim ก่อน ส่วน Charizard, Aerodactyl และ Dragonite จะบินสูงข้ามสิ่งกีดขวางได้หลังชนะ Pokémon League',rideDexKicker:'RIDE DEX',rideDexTitle:'เลือกเพื่อนร่วมทาง',rideDexLead:'กดการ์ดเพื่อดูวิธีรับโปเกมอนแต่ละตัว',ridesCountLabel:'ตัวที่ขี่ได้',disclaimer:'คู่มือแฟนเมด Pokémon: Let’s Go, Pikachu! ไม่เกี่ยวข้องกับ Nintendo หรือ The Pokémon Company',all:'ทั้งหมด',balls:'Poké Ball',medicine:'ยา',candy:'ลูกกวาด',tm:'TM 01–60',field:'ไอเท็มเดินทาง',ground:'บนบก',water:'ในน้ำ',air:'บนฟ้า',price:'ราคาซื้อ',notSold:'ไม่ได้ขายทั่วไป',where:'วิธีได้รับ',effect:'รายละเอียด',stats:'ข้อมูลท่า',power:'พลัง',accuracy:'แม่นยำ',search:'ค้นหาชื่อ / TM / สถานที่',found:'รายการ',noResults:'ไม่พบรายการ',candyWhere:'จับโปเกมอนซ้ำ ทำ Catch Combo หรือส่งโปเกมอนให้ Professor Oak',tmUse:'สอนท่านี้ให้โปเกมอนที่ใช้ได้ TM ใช้ซ้ำได้ไม่จำกัด',airNote:'หลังชนะ Pokémon League จึงบินสูงข้ามสิ่งกีดขวางได้',waterNote:'ต้องเรียน Secret Technique: Sea Skim ก่อน',fastNote:'เคลื่อนที่บนบกได้เร็วขึ้น',rideHow:'วิธีได้รับ',rideKind:'รูปแบบการขี่'},
@@ -38,14 +39,14 @@
     const q = $('#itemSearch').value.trim().toLocaleLowerCase();
     const items = allItems().filter(x => (active === 'all' || x.c === active) && (!q || [x.n,x.th,x.en,x.location,x.stat,x.type].some(v => String(v||'').toLocaleLowerCase().includes(q))));
     $('#resultCount').textContent = `${items.length} ${tx('found')}`;
-    $('#itemGrid').innerHTML = items.length ? items.map(x => `<button type="button" class="item-card ${esc(x.c)}" data-item="${esc(x.n)}"><span class="item-card-top">${icon(x.c)}${badge(x.c,category(x.c))}</span><strong>${esc(x.n)}</strong><span class="item-card-desc">${esc(x.c==='tm' ? `${x.type} · ${x.location}` : x[lang])}</span><span class="item-card-foot">${x.p ? `<b>₽${fmt(x.p)}</b>` : x.c==='tm' ? `<b>PP ${esc(x.pp)}</b>` : x.stat ? `<b>${esc(x.stat)}</b>` : '<span>✦</span>'}<span aria-hidden="true">↗</span></span></button>`).join('') : `<div class="empty-state">${tx('noResults')}</div>`;
+    $('#itemGrid').innerHTML = items.length ? items.map(x => `<button type="button" class="item-card ${esc(x.c)}" data-item="${esc(x.n)}"><span class="item-card-top">${icon(x.c)}${badge(x.c,category(x.c))}</span><strong>${esc(x.n)}</strong><span class="item-card-desc">${esc(x.c==='tm' ? `${x.type} · ${x.location}` : x[lang])}</span><span class="item-card-foot">${x.p ? `<b>₽${fmt(x.p)}</b>` : x.c==='tm' ? `<b>PP ${esc(x.pp)}</b>` : x.stat ? `<b>${esc(x.stat)}</b>` : `<span aria-hidden="true">${uiIcon('sparkle')}</span>`}<span aria-hidden="true">${uiIcon('arrow')}</span></span></button>`).join('') : `<div class="empty-state">${tx('noResults')}</div>`;
   }
   function renderRides() {
     const tabs = ['all','ground','water','air'];
     $('#rideTabs').innerHTML = tabs.map(c => `<button type="button" data-tab="${c}" class="${active===c?'active':''}" aria-pressed="${active===c}">${esc(category(c))}</button>`).join('');
     const rides = rideData.filter(x => active === 'all' || x.kind === active);
     $('#resultCount').textContent = `${rides.length} ${tx('found')}`;
-    $('#rideGrid').innerHTML = rides.map(x => `<button type="button" class="ride-card ${esc(x.kind)}" data-ride="${x.id}"><span class="ride-portrait"><img src="assets/${x.id}.png" alt="" loading="lazy"></span><span class="ride-number">#${String(x.id).padStart(3,'0')}</span><strong>${esc(x.n)}</strong><span class="ride-kind">${esc(category(x.kind))}${x.fast ? ' · <svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg#bolt"></use></svg>' : ''}</span><span class="ride-arrow" aria-hidden="true">↗</span></button>`).join('');
+    $('#rideGrid').innerHTML = rides.map(x => `<button type="button" class="ride-card ${esc(x.kind)}" data-ride="${x.id}"><span class="ride-portrait"><img src="assets/${x.id}.png" alt="" loading="lazy"></span><span class="ride-number">#${String(x.id).padStart(3,'0')}</span><strong>${esc(x.n)}</strong><span class="ride-kind">${esc(category(x.kind))}${x.fast ? ' · <svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=all-icons-1#bolt"></use></svg>' : ''}</span><span class="ride-arrow" aria-hidden="true">${uiIcon('arrow')}</span></button>`).join('');
   }
   function showItem(name) {
     const x = allItems().find(v => v.n === name); if (!x) return;

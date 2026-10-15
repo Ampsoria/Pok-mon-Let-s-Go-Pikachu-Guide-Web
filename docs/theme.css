@@ -12,6 +12,18 @@ body { background: #fffbf3; }
 button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid #2468bd; outline-offset: 3px; }
 .site-icon { display: inline-block; width: 1.2em; height: 1.2em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+.menu-btn { place-items: center; }
+.detail-close, .pikachu-nav-close { display: grid; place-items: center; }
+.menu-btn .site-icon { width: 21px; height: 21px; }
+.detail-close .site-icon, .pikachu-nav-close .site-icon { width: 21px; height: 21px; }
+.check-btn .site-icon { width: 17px; height: 17px; stroke-width: 3; }
+.pokemon-card .fav .site-icon { width: 21px; height: 21px; }
+.filter-btn .site-icon { width: 18px; height: 18px; margin-right: 5px; }
+.search-wrap .site-icon, .guide-search .site-icon { width: 21px; height: 21px; }
+.item-card-foot .site-icon, .ride-arrow .site-icon, .quick-arrow .site-icon { width: 20px; height: 20px; }
+.accordion-list summary .plus .site-icon { width: 19px; height: 19px; }
+#loadMore .site-icon { width: 17px; height: 17px; margin-left: 5px; }
+.champion-card::before { content: ""; width: 190px; height: 190px; top: -75px; background: #ffffff0b; clip-path: polygon(50% 0, 59% 40%, 100% 50%, 59% 60%, 50% 100%, 41% 60%, 0 50%, 41% 40%); }
 
 .topbar {
   border-bottom: 3px solid #26334c;
@@ -306,6 +318,7 @@ button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
 footer { border-top: 6px solid #e9504c; }
 
 @media (max-width: 760px) {
+  .menu-btn { display: grid; }
   .mobile-nav.open { border-bottom: 3px solid #26334c; box-shadow: 0 7px 0 #e9504c; }
   .hero-stats { gap: 9px; }
   .hero-stats div { min-width: 0; flex: 1; padding: 8px; }
@@ -314,7 +327,7 @@ footer { border-top: 6px solid #e9504c; }
 }
 @media (min-width: 761px) and (max-width: 1080px) {
   .desktop-nav { display: none; }
-  .menu-btn { display: block; }
+  .menu-btn { display: grid; }
   .mobile-nav.open { display: flex; position: fixed; top: 78px; left: 0; right: 0; background: #fffdf8; z-index: 49; flex-direction: column; padding: 18px 30px 24px; gap: 15px; font-size: 14px; font-weight: 700; border-bottom: 3px solid #26334c; box-shadow: 0 7px 0 #e9504c; }
 }
 @media (max-width: 500px) {
