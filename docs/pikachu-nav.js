@@ -1,21 +1,21 @@
 (() => {
   const home = document.body.dataset.page !== 'items' && document.body.dataset.page !== 'rides';
   const sections = [
-    ['journey', 'การเดินทาง', 'Journey', '✦'],
-    ['gyms', 'ยิม', 'Gyms', '◆'],
-    ['elite', 'จตุรเทพ', 'Elite Four', '★'],
-    ['techniques', 'เทคนิคพิเศษ', 'Secret Techniques', '✂'],
-    ['types', 'แพ้ชนะธาตุ', 'Type Matchups', '⚡'],
-    ['dex', 'โปเกเดกซ์', 'Pokédex', '◉'],
-    ['puzzles', 'วิธีแก้ปริศนา', 'Puzzles', '◇'],
-    ['secrets', 'ความลับ', 'Secrets', '✧'],
-    ['items.html', 'ไอเท็มและ TM', 'Items & TMs', '▣'],
-    ['rides.html', 'โปเกมอนขี่', 'Ride Pokémon', '➤']
+    ['journey', 'การเดินทาง', 'Journey', 'map'],
+    ['gyms', 'ยิม', 'Gyms', 'badge'],
+    ['elite', 'จตุรเทพ', 'Elite Four', 'sparkle'],
+    ['techniques', 'เทคนิคพิเศษ', 'Secret Techniques', 'scissors'],
+    ['types', 'แพ้ชนะธาตุ', 'Type Matchups', 'bolt'],
+    ['dex', 'โปเกเดกซ์', 'Pokédex', 'pokeball'],
+    ['puzzles', 'วิธีแก้ปริศนา', 'Puzzles', 'puzzle'],
+    ['secrets', 'ความลับ', 'Secrets', 'sparkle'],
+    ['items.html', 'ไอเท็มและ TM', 'Items & TMs', 'bag'],
+    ['rides.html', 'โปเกมอนขี่', 'Ride Pokémon', 'ride']
   ];
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'pikachu-nav-button';
-  button.innerHTML = '<img src="assets/25.png" alt=""><span aria-hidden="true">✦</span>';
+  button.innerHTML = '<img src="assets/25.png" alt=""><span aria-hidden="true"><svg class="site-icon"><use href="assets/ui-icons.svg#sparkle"></use></svg></span>';
   button.setAttribute('aria-haspopup', 'dialog');
   const dialog = document.createElement('dialog');
   dialog.className = 'pikachu-nav-dialog';
@@ -30,10 +30,10 @@
     button.setAttribute('aria-label', th ? 'เปิดเมนูเลือกหัวข้อกับพิกาชู' : 'Open Pikachu quick navigation');
     dialog.querySelector('h2').textContent = th ? 'อยากไปหัวข้อไหน?' : 'Where would you like to go?';
     close.setAttribute('aria-label', th ? 'ปิดเมนู' : 'Close menu');
-    top.textContent = th ? '↑ กลับไปด้านบน' : '↑ Back to top';
+    top.innerHTML = `<svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg#up"></use></svg>${th ? 'กลับไปด้านบน' : 'Back to top'}`;
     links.innerHTML = sections.map(([path, thai, english, icon]) => {
       const href = path.includes('.html') ? path : `${home ? '' : 'index.html'}#${path}`;
-      return `<a href="${href}"><span aria-hidden="true">${icon}</span>${th ? thai : english}<span aria-hidden="true">↗</span></a>`;
+      return `<a href="${href}"><span aria-hidden="true"><svg class="site-icon"><use href="assets/ui-icons.svg#${icon}"></use></svg></span>${th ? thai : english}<svg class="site-icon nav-arrow" aria-hidden="true"><use href="assets/ui-icons.svg#arrow"></use></svg></a>`;
     }).join('');
   }
   render();

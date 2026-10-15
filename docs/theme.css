@@ -11,6 +11,7 @@
 body { background: #fffbf3; }
 button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid #2468bd; outline-offset: 3px; }
+.site-icon { display: inline-block; width: 1.2em; height: 1.2em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
 
 .topbar {
   border-bottom: 3px solid #26334c;
@@ -84,8 +85,26 @@ button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
   box-shadow: inset 0 0 0 8px #fff9;
 }
 .hero-pikachu { filter: drop-shadow(10px 18px 2px #865f2638); }
+.hero-pikachu img { transition: transform .3s ease; }
+.hero-pikachu:hover img { transform: scale(1.04) rotate(2deg); }
 .float-mon { border-width: 4px; box-shadow: 7px 8px 0 #26334c55; }
+.sparkle .site-icon { width: 18px; height: 18px; }
+.decor-star .site-icon { width: 36px; height: 36px; stroke-width: 1.7; }
 .hero-caption { border-width: 3px; box-shadow: 4px 4px 0 #26334c44; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-pikachu { animation: pikachu-bob 3.8s ease-in-out infinite; }
+  .float-bulba { animation: mon-bulba 5s ease-in-out infinite; }
+  .float-char { animation: mon-char 4.4s ease-in-out -1.1s infinite; }
+  .float-squirt { animation: mon-squirt 4.8s ease-in-out -2.1s infinite; }
+  .decor-star { animation: star-twinkle 2.8s ease-in-out infinite; }
+  .star-b { animation-delay: -.9s; }
+  .star-c { animation-delay: -1.7s; }
+}
+@keyframes pikachu-bob { 0%, 100% { transform: translateY(0) rotate(-7deg); } 50% { transform: translateY(-13px) rotate(-4deg); } }
+@keyframes mon-bulba { 0%, 100% { transform: translateY(0) rotate(-13deg); } 50% { transform: translateY(-10px) rotate(-9deg); } }
+@keyframes mon-char { 0%, 100% { transform: translateY(0) rotate(12deg); } 50% { transform: translateY(-11px) rotate(8deg); } }
+@keyframes mon-squirt { 0%, 100% { transform: translateY(0) rotate(10deg); } 50% { transform: translateY(-9px) rotate(14deg); } }
+@keyframes star-twinkle { 0%, 100% { opacity: .5; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.12); } }
 
 .quick-strip { position: relative; z-index: 1; margin-top: 30px; }
 .quick-strip a {
@@ -98,6 +117,11 @@ button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
 .quick-strip a:nth-child(2) { background: #fff2ea; }
 .quick-strip a:nth-child(3) { background: #ecf5ff; }
 .quick-icon { border: 1px solid #26334c1c; }
+.quick-icon .site-icon { width: 27px; height: 27px; }
+.tech-icon .site-icon { width: 31px; height: 31px; }
+.puzzle-icon .site-icon { width: 22px; height: 22px; }
+.type-spark .site-icon { width: 64px; height: 64px; }
+.spark-badge .site-icon { width: 29px; height: 29px; margin-bottom: 4px; }
 .quick-arrow { color: var(--red); font-weight: 800; }
 
 .section-head .kicker {
@@ -367,6 +391,7 @@ footer { border-top: 6px solid #e9504c; }
 .pikachu-nav-button:hover, .pikachu-nav-button:focus-visible { transform: translateY(-4px); box-shadow: 0 11px 0 #26334c, 0 16px 28px #26334c40; }
 .pikachu-nav-button img { width: 55px; height: 55px; object-fit: contain; image-rendering: pixelated; }
 .pikachu-nav-button span { position: absolute; top: 3px; right: 0; color: #e9504c; font-size: 17px; }
+.pikachu-nav-button span .site-icon { width: 18px; height: 18px; }
 .pikachu-nav-dialog {
   width: min(470px, calc(100vw - 30px)); max-height: min(85dvh, 740px); padding: 0;
   border: 3px solid #26334c; border-radius: 22px; background: #fffdf8; color: #26334c;
@@ -382,8 +407,10 @@ footer { border-top: 6px solid #e9504c; }
 .pikachu-nav-links a { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 9px 10px; border: 2px solid #26334c; border-radius: 11px; background: #fff; font-size: 13px; font-weight: 800; line-height: 1.3; box-shadow: 3px 3px 0 #26334c; }
 .pikachu-nav-links a:hover, .pikachu-nav-links a:focus-visible { background: #fff1bb; }
 .pikachu-nav-links a span:first-child { display: grid; place-items: center; width: 27px; height: 27px; flex: none; border-radius: 7px; background: #ffe17c; color: #26334c; }
-.pikachu-nav-links a span:last-child { margin-left: auto; color: #b64340; }
-.pikachu-nav-top { display: block; width: calc(100% - 40px); min-height: 46px; margin: 0 20px 20px; border: 2px solid #26334c; border-radius: 10px; background: #26334c; color: white; font-size: 13px; font-weight: 800; }
+.pikachu-nav-links a span:first-child .site-icon { width: 17px; height: 17px; }
+.pikachu-nav-links a .nav-arrow { width: 16px; height: 16px; margin-left: auto; color: #b64340; }
+.pikachu-nav-top { display: flex; align-items: center; justify-content: center; gap: 7px; width: calc(100% - 40px); min-height: 46px; margin: 0 20px 20px; border: 2px solid #26334c; border-radius: 10px; background: #26334c; color: white; font-size: 13px; font-weight: 800; }
+.pikachu-nav-top .site-icon { width: 16px; height: 16px; }
 .pikachu-nav-top:hover, .pikachu-nav-top:focus-visible { background: #344c70; }
 @media (max-width: 500px) {
   .pikachu-nav-button { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); width: 62px; height: 62px; }
