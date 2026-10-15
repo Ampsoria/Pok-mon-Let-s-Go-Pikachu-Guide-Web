@@ -56,3 +56,13 @@ body[data-page] .desktop-nav .current{color:#df514a}
 @media(max-width:1100px){.item-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ride-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:760px){.guide-hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:46px;padding-bottom:30px}.guide-hero-art{height:175px}.guide-hero-art:before{width:165px;height:165px}.guide-hero-art>img{width:160px;height:160px}.guide-hero-art .ride-mini{width:74px;height:74px}.guide-section{padding-top:54px;padding-bottom:62px}.guide-toolbar{align-items:stretch;flex-direction:column}.guide-search{width:100%}.item-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ride-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.how-grid{grid-template-columns:1fr}.guide-footer{grid-template-columns:1fr 1fr}.guide-footer .brand{grid-column:1/-1}}
 @media(max-width:500px){.guide-hero h1{font-size:43px}.guide-hero p{font-size:14px}.guide-intro{align-items:start}.guide-stat{min-width:72px;padding:8px}.guide-stat strong{font-size:25px}.guide-stat span{font-size:9px}.item-grid{gap:11px}.item-card{min-height:216px;padding:12px;box-shadow:3px 4px 0 #26334c}.item-card strong{font-size:16px}.item-badge{font-size:9px;padding:4px 6px}.item-icon{width:46px;height:46px}.ride-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ride-card{min-height:225px}.guide-footer{grid-template-columns:1fr}.dialog-head{padding:25px 22px}.dialog-facts{padding:22px}}
+
+@media (max-width: 760px) {
+  .guide-tabs button { min-height: 44px; }
+  .guide-search input { min-width: 0; }
+}
+
+@media (max-width: 500px) {
+  .item-card-top { flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .item-badge { white-space: normal; overflow-wrap: anywhere; }
+}

@@ -340,3 +340,19 @@ footer { border-top: 6px solid #e9504c; }
 .matchup-footnote{max-width:830px;margin:20px 0 0;color:#d7e5f3;font-size:12px;line-height:1.7}
 @media(max-width:760px){#types .type-tool{grid-template-columns:1fr}.matchup-mode button{flex:1;font-size:12px;padding:10px}.matchup-lesson{font-size:11px}.matchup-lesson-step,.matchup-lesson-result{padding:6px 9px}}
 @media(max-width:500px){.matchup-mode{flex-direction:column}.matchup-group-list{grid-template-columns:1fr}.matchup-lesson{gap:7px}.matchup-lesson>strong{font-size:15px}}
+
+@media (max-width: 760px) {
+  .lang-btn, .menu-btn { min-width: 44px; min-height: 44px; }
+  .mobile-nav.open { max-height: calc(100dvh - 68px); overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-nav a { display: flex; align-items: center; min-height: 44px; }
+}
+
+@media (max-width: 500px) {
+  .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  #dex .dex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pokemon-card { min-width: 0; padding: 15px 9px 17px; }
+  .pokemon-card img { width: 86px; height: 86px; margin-top: 22px; }
+  .pokemon-card .fav { display: grid; place-items: center; width: 44px; height: 44px; top: 2px; right: 2px; padding: 0; border-radius: 50%; }
+  .dex-toolbar select, .filter-btn { min-height: 44px; }
+}
