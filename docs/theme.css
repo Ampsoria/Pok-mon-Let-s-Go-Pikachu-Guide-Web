@@ -356,3 +356,40 @@ footer { border-top: 6px solid #e9504c; }
   .pokemon-card .fav { display: grid; place-items: center; width: 44px; height: 44px; top: 2px; right: 2px; padding: 0; border-radius: 50%; }
   .dex-toolbar select, .filter-btn { min-height: 44px; }
 }
+
+/* Pikachu's quick navigation, shared by all guide pages. */
+.pikachu-nav-button {
+  position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 48;
+  display: grid; place-items: center; width: 74px; height: 74px; padding: 7px;
+  border: 3px solid #26334c; border-radius: 50%; background: #ffdc59; color: #26334c;
+  box-shadow: 0 7px 0 #26334c, 0 13px 26px #26334c40; transition: transform .18s, box-shadow .18s;
+}
+.pikachu-nav-button:hover, .pikachu-nav-button:focus-visible { transform: translateY(-4px); box-shadow: 0 11px 0 #26334c, 0 16px 28px #26334c40; }
+.pikachu-nav-button img { width: 55px; height: 55px; object-fit: contain; image-rendering: pixelated; }
+.pikachu-nav-button span { position: absolute; top: 3px; right: 0; color: #e9504c; font-size: 17px; }
+.pikachu-nav-dialog {
+  width: min(470px, calc(100vw - 30px)); max-height: min(85dvh, 740px); padding: 0;
+  border: 3px solid #26334c; border-radius: 22px; background: #fffdf8; color: #26334c;
+  box-shadow: 9px 10px 0 #26334c; overflow: auto;
+}
+.pikachu-nav-dialog::backdrop { background: #18243ba8; backdrop-filter: blur(3px); }
+.pikachu-nav-head { display: flex; align-items: center; gap: 13px; padding: 18px 20px; background: #ffe17c; border-bottom: 3px solid #26334c; }
+.pikachu-nav-head img { width: 58px; height: 58px; object-fit: contain; image-rendering: pixelated; }
+.pikachu-nav-head small { font: 800 10px Outfit, Anuphan, sans-serif; letter-spacing: .16em; color: #a63c35; }
+.pikachu-nav-head h2 { margin: 3px 36px 0 0; font-size: clamp(20px, 5vw, 27px); line-height: 1.25; }
+.pikachu-nav-close { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 2px solid #26334c; border-radius: 50%; background: #fffdf8; color: #26334c; font-size: 27px; line-height: 1; }
+.pikachu-nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; padding: 18px 20px 12px; }
+.pikachu-nav-links a { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 9px 10px; border: 2px solid #26334c; border-radius: 11px; background: #fff; font-size: 13px; font-weight: 800; line-height: 1.3; box-shadow: 3px 3px 0 #26334c; }
+.pikachu-nav-links a:hover, .pikachu-nav-links a:focus-visible { background: #fff1bb; }
+.pikachu-nav-links a span:first-child { display: grid; place-items: center; width: 27px; height: 27px; flex: none; border-radius: 7px; background: #ffe17c; color: #26334c; }
+.pikachu-nav-links a span:last-child { margin-left: auto; color: #b64340; }
+.pikachu-nav-top { display: block; width: calc(100% - 40px); min-height: 46px; margin: 0 20px 20px; border: 2px solid #26334c; border-radius: 10px; background: #26334c; color: white; font-size: 13px; font-weight: 800; }
+.pikachu-nav-top:hover, .pikachu-nav-top:focus-visible { background: #344c70; }
+@media (max-width: 500px) {
+  .pikachu-nav-button { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); width: 62px; height: 62px; }
+  .pikachu-nav-button img { width: 48px; height: 48px; }
+  .pikachu-nav-head { padding: 14px 16px; }
+  .pikachu-nav-links { gap: 8px; padding: 14px 14px 12px; }
+  .pikachu-nav-links a { padding: 8px; font-size: 12px; }
+  .pikachu-nav-top { width: calc(100% - 28px); margin: 0 14px 14px; }
+}
