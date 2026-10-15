@@ -4,7 +4,7 @@
 
 ### คู่มือ Pokémon: Let's Go, Pikachu! ภาษาไทย / English
 
-<a href="https://ampsoria.github.io/Pok-mon-Let-s-Go-Pikachu-Guide-Web/">
+<a href="https://ampsoria.github.io/Pokemon-LetsGo-Pikachu-GuideWeb/">
   <img src="docs/assets/readme-open-guide.svg" alt="เปิดเว็บไกด์ Pokémon: Let's Go, Pikachu! / Open the live guide" width="420">
 </a>
 
@@ -51,7 +51,7 @@ python3 -m http.server 8765 --directory docs
 2. เลือก **Source: Deploy from a branch**
 3. เลือก **Branch: main**, **Folder: /docs** แล้วกด **Save**
 
-เมื่อ GitHub Pages เผยแพร่เสร็จ ปุ่มด้านบนจะเปิดเว็บที่ <https://ampsoria.github.io/Pok-mon-Let-s-Go-Pikachu-Guide-Web/> โดยไม่ต้องใช้ GitHub Actions หรือ backend
+เมื่อ GitHub Pages เผยแพร่เสร็จ ปุ่มด้านบนจะเปิดเว็บที่ <https://ampsoria.github.io/Pokemon-LetsGo-Pikachu-GuideWeb/> โดยไม่ต้องใช้ GitHub Actions หรือ backend
 
 ## ข้อมูลและเครดิต
 
