@@ -1,6 +1,7 @@
 (() => {
   const home = document.body.dataset.page !== 'items' && document.body.dataset.page !== 'rides';
   const sections = [
+    ['map', 'แผนที่คันโต', 'Kanto Map', 'map'],
     ['journey', 'การเดินทาง', 'Journey', 'map'],
     ['gyms', 'ยิม', 'Gyms', 'badge'],
     ['elite', 'จตุรเทพ', 'Elite Four', 'sparkle'],
