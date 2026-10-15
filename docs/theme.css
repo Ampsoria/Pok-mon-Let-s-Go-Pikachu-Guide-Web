@@ -17,7 +17,23 @@ button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
   border-bottom: 3px solid #26334c;
   box-shadow: 0 8px 0 #e9504c, 0 13px 25px #26334c14;
 }
-.brand-ball { box-shadow: 0 4px 0 #26334c24; }
+.brand-ball {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 3px solid #26334c;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #f26661 0 45%, #26334c 45% 56%, #fff 56% 100%);
+  box-shadow: 0 4px 0 #26334c24;
+}
+.brand-ball::after {
+  width: 13px;
+  height: 13px;
+  left: 50%;
+  top: 50%;
+  border: 3px solid #26334c;
+  transform: translate(-50%, -50%);
+}
 .desktop-nav a { position: relative; padding: 8px 2px; transition: color .2s ease; }
 .desktop-nav a::after {
   content: "";
