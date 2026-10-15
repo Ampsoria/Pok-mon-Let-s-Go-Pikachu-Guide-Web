@@ -1,6 +1,6 @@
 (() => {
   const $ = s => document.querySelector(s);
-  const uiIcon = name => `<svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=all-icons-1#${name}"></use></svg>`;
+  const uiIcon = name => `<svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=kanto-icons-2#${name}"></use></svg>`;
   const page = document.body.dataset.page;
   let lang = localStorage.getItem('kc-lang') === 'en' ? 'en' : 'th';
   let active = page === 'items' ? 'balls' : 'all';
@@ -22,7 +22,8 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const badge = (kind, label) => `<span class="item-badge ${esc(kind)}">${esc(label)}</span>`;
   const category = c => tx(c);
-  const icon = c => `<span class="item-icon icon-${esc(c)}" aria-hidden="true"><i></i></span>`;
+  const categoryIcons = {balls:'pokeball', medicine:'potion', candy:'candy', tm:'tm', field:'field'};
+  const icon = c => `<span class="item-icon icon-${esc(c)}" aria-hidden="true">${uiIcon(categoryIcons[c] || 'bag')}</span>`;
   const fmt = n => Number(n).toLocaleString('en-US');
   function renderChrome() {
     document.documentElement.lang = lang;
@@ -46,7 +47,7 @@
     $('#rideTabs').innerHTML = tabs.map(c => `<button type="button" data-tab="${c}" class="${active===c?'active':''}" aria-pressed="${active===c}">${esc(category(c))}</button>`).join('');
     const rides = rideData.filter(x => active === 'all' || x.kind === active);
     $('#resultCount').textContent = `${rides.length} ${tx('found')}`;
-    $('#rideGrid').innerHTML = rides.map(x => `<button type="button" class="ride-card ${esc(x.kind)}" data-ride="${x.id}"><span class="ride-portrait"><img src="assets/${x.id}.png" alt="" loading="lazy"></span><span class="ride-number">#${String(x.id).padStart(3,'0')}</span><strong>${esc(x.n)}</strong><span class="ride-kind">${esc(category(x.kind))}${x.fast ? ' · <svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=all-icons-1#bolt"></use></svg>' : ''}</span><span class="ride-arrow" aria-hidden="true">${uiIcon('arrow')}</span></button>`).join('');
+    $('#rideGrid').innerHTML = rides.map(x => `<button type="button" class="ride-card ${esc(x.kind)}" data-ride="${x.id}"><span class="ride-portrait"><img src="assets/${x.id}.png" alt="" loading="lazy"></span><span class="ride-number">#${String(x.id).padStart(3,'0')}</span><strong>${esc(x.n)}</strong><span class="ride-kind">${esc(category(x.kind))}${x.fast ? ' · <svg class="site-icon" aria-hidden="true"><use href="assets/ui-icons.svg?v=kanto-icons-2#bolt"></use></svg>' : ''}</span><span class="ride-arrow" aria-hidden="true">${uiIcon('arrow')}</span></button>`).join('');
   }
   function showItem(name) {
     const x = allItems().find(v => v.n === name); if (!x) return;
