@@ -483,3 +483,40 @@ footer { border-top: 6px solid #e9504c; }
 #loadMore[hidden] { display: none; }
 @media (max-width: 700px) { .map-places { grid-template-columns: 1fr; } }
 @media (max-width: 500px) { .map-section { padding-top: 54px; } .map-place { padding: 16px; } .kanto-map-figure figcaption { padding: 10px 12px; } .acquisition { padding: 15px; } .acquisition-list { grid-template-columns: 1fr; } }
+
+/* Small moments of motion across the field guide. */
+@media (prefers-reduced-motion: no-preference) {
+  .fx-ready { opacity: 0; }
+  .fx-ready.fx-visible { animation: fx-rise .62s cubic-bezier(.2,.7,.2,1) var(--fx-delay, 0ms) both; }
+  .halo { animation: halo-breathe 5.5s ease-in-out infinite; }
+  .orbit-one { animation: orbit-one-drift 32s ease-in-out infinite alternate; }
+  .orbit-two { animation: orbit-two-drift 39s ease-in-out infinite alternate; }
+  .hero-actions .btn-dark { position: relative; overflow: hidden; }
+  .hero-actions .btn-dark::after { content: ""; position: absolute; inset: -30% auto -30% -55%; width: 35%; background: linear-gradient(90deg, transparent, #ffffff55, transparent); transform: skewX(-23deg); pointer-events: none; }
+  .hero-actions .btn-dark:hover::after, .hero-actions .btn-dark:focus-visible::after { animation: button-shine .7s ease-out; }
+  .guide-hero-art::before { animation: guide-orbit 28s linear infinite; }
+  .guide-hero-art > img:first-of-type { animation: guide-mon-float 4.5s ease-in-out infinite; }
+  .guide-hero-art .ride-mini { animation: guide-mon-float 5s ease-in-out -1.5s infinite; }
+  .brand-ball { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .brand:hover .brand-ball { transform: rotate(24deg); }
+  .pokemon-card img, .ride-portrait img, .guide-hero-art > img { transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+  .pokemon-card:hover img, .pokemon-card:focus-within img { transform: translateY(-6px) scale(1.12); }
+  .ride-card:hover .ride-portrait img, .ride-card:focus-visible .ride-portrait img { transform: translateY(-6px) rotate(-3deg) scale(1.08); }
+  .pokemon-card::after, .item-card::after, .ride-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 25%, #ffffff78 50%, transparent 75%); transform: translateX(-135%); pointer-events: none; transition: transform .7s ease; }
+  .pokemon-card:hover::after, .pokemon-card:focus-within::after, .item-card:hover::after, .item-card:focus-visible::after, .ride-card:hover::after, .ride-card:focus-visible::after { transform: translateX(135%); }
+  .item-card, .ride-card { overflow: hidden; }
+  .item-card { position: relative; }
+  .pikachu-nav-button img { animation: pika-peek 5s ease-in-out infinite; }
+  .pokemon-dialog[open], .guide-dialog[open], .pikachu-nav-dialog[open] { animation: dialog-pop .3s cubic-bezier(.2,.8,.2,1) both; }
+  .pokemon-dialog[open]::backdrop, .guide-dialog[open]::backdrop, .pikachu-nav-dialog[open]::backdrop { animation: backdrop-fade .3s ease both; }
+}
+@keyframes fx-rise { from { opacity: 0; transform: translateY(22px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes halo-breathe { 50% { transform: scale(1.035); filter: brightness(1.08); } }
+@keyframes orbit-one-drift { from { transform: rotate(-17deg); } to { transform: rotate(-7deg); } }
+@keyframes orbit-two-drift { from { transform: rotate(20deg); } to { transform: rotate(8deg); } }
+@keyframes button-shine { from { left: -55%; } to { left: 130%; } }
+@keyframes guide-orbit { to { transform: rotate(360deg); } }
+@keyframes guide-mon-float { 50% { transform: translateY(-9px) rotate(-3deg); } }
+@keyframes pika-peek { 0%, 84%, 100% { transform: rotate(0); } 88% { transform: rotate(-10deg); } 92% { transform: rotate(8deg); } 96% { transform: rotate(-5deg); } }
+@keyframes dialog-pop { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes backdrop-fade { from { opacity: 0; } to { opacity: 1; } }
